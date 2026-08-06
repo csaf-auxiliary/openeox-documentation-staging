@@ -45,6 +45,20 @@ The **Bootstrap** framework is used in this project.
 
 - **Source**: [Bootstrap](https://getbootstrap.com)
 
+## Font: Jost
+
+The **Jost** font is used in this project.
+
+- **Font Name**: Jost
+
+- **Designed by**: Owen Earl
+
+- **Distributed by**: Google Fonts
+
+- **License**: [SIL Open Font License 1.1](https://opensource.org/license/OFL-1.1)
+
+- **Source**: [Google Fonts](https://fonts.google.com/specimen/Jost)
+
 ## Icons Used in This Project
 
 ### GitHub Outline Fill Icon
