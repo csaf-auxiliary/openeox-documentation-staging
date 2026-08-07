@@ -1,2 +1,10 @@
+@import 'utils/vars';
 @import 'bootstrap/scss/bootstrap';
+
+@import 'custom/blocks/buttons';
+@import 'custom/blocks/header';
+
+@import 'custom/pages/index';
+
+@import 'utils/reset';
 @import 'utils/typography';

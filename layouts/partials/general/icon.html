@@ -1,0 +1,19 @@
+{{ $iconName := "" }}
+{{ $iconClass := "" }}
+
+{{ if isset . "name" }}
+  {{ $iconName = .name }}
+  {{ $iconClass = .class | default "" }}
+{{ else }}
+  {{ $iconName = . }}
+{{ end }}
+
+{{ $iconPath := printf "icons/%s" $iconName }}
+
+{{ with resources.Get $iconPath }}
+  {{ if $iconClass }}
+    <span class="{{ $iconClass }}">{{ .Content | safeHTML }}</span>
+  {{ else }}
+    <span>{{ .Content | safeHTML }}</span>
+  {{ end }}
+{{ end }}
