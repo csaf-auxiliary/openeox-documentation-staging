@@ -53,7 +53,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: Europe/Berlin
         run: hugo --gc --minify
-        # run: hugo --gc --minify --baseURL "<use actual url>"
+        # run: hugo --gc --minify --baseURL "https://openeox.org"  # TODO: replace previous line with this after approval and confirming the url
 
       - name: Remove .license files from 'public' folder
         run: find public -type f -name "*.license" -exec rm -f {} \;
