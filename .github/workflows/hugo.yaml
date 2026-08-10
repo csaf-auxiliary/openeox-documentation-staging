@@ -1,6 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: 2025 OASIS Open
-# SPDX-FileCopyrightText: Based on the code of Hugo <https://neohugo.github.io/hosting-and-deployment/hosting-on-github/>
+# SPDX-FileCopyrightText: Based on the code of Hugo <https://gohugo.io/host-and-deploy/host-on-github-pages/>
 
 # This code is based on an original implementation from the Hugo website
 # and has been adapted
@@ -21,7 +21,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Hugo
         env:
@@ -43,7 +43,7 @@ jobs:
 
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       - name: Install Node.js dependencies
         run: '[[ -f package-lock.json ]] && npm ci || true'
@@ -59,7 +59,7 @@ jobs:
         run: find public -type f -name "*.license" -exec rm -f {} \;
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./public
 
@@ -73,4 +73,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
