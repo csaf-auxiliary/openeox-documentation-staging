@@ -1,19 +1,17 @@
 {{ $iconName := "" }}
 {{ $iconClass := "" }}
 
-{{ if isset . "name" }}
-  {{ $iconName = .name }}
+{{ if reflect.IsMap . }}
+  {{ $iconName = .name | default "" }}
   {{ $iconClass = .class | default "" }}
 {{ else }}
   {{ $iconName = . }}
 {{ end }}
 
-{{ $iconPath := printf "icons/%s" $iconName }}
-
-{{ with resources.Get $iconPath }}
-  {{ if $iconClass }}
-    <span class="{{ $iconClass }}">{{ .Content | safeHTML }}</span>
-  {{ else }}
-    <span>{{ .Content | safeHTML }}</span>
+{{ if $iconName }}
+  {{ with resources.Get (printf "icons/%s" $iconName) }}
+    <span{{ with $iconClass }} class="{{ . }}"{{ end }}>
+      {{ .Content | safeHTML }}
+    </span>
   {{ end }}
 {{ end }}
