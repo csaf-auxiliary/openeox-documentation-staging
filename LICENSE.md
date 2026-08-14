@@ -101,7 +101,7 @@ form the Hugo website and was adapted to suit this project requirements.
 
 - **License**: [Apache 2.0](https://opensource.org/licenses/Apache-2.0)
 
-- **Source**: [Deployment of the Hugo website to GitHub Pages](https://gohugo.io/host-and-deploy/host-on-github-pages/).
+- **Source**: [Deployment of the Hugo website to GitHub Pages](https://github.com/gohugoio/hugoDocs/blob/b2c118a22c0644befce2fc20f4b21df8f1da790a/content/en/host-and-deploy/host-on-github-pages/index.md).
 
 ## General License Notice
 
