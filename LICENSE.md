@@ -17,34 +17,6 @@ The textual content of this website and the OpenEoX logo are
 the intellectual property of the OpenEOX Technical Committee (TC).
 All rights reserved.
 
-## Static website generator: Hugo
-
-The **Hugo** static website generator is used in this project.
-
-- **Static Website Generator Name**: Hugo
-
-- **Design**: The Hugo Authors
-
-- **Distribution**: Hugo
-
-- **License**: [Apache 2.0](https://opensource.org/licenses/Apache-2.0)
-
-- **Source**: [Hugo](https://gohugo.io/)
-
-## CSS Framework: Bootstrap
-
-The **Bootstrap** framework is used in this project.
-
-- **Framework Name**: Bootstrap
-
-- **Design**: Copyright 2011-2018 The Bootstrap Authors
-
-- **Distribution**: Copyright 2011-2018 Twitter, Inc.
-
-- **License**: [MIT](https://opensource.org/licenses/MIT)
-
-- **Source**: [Bootstrap](https://getbootstrap.com)
-
 ## Font: Jost
 
 The **Jost** font is used in this project.
