@@ -89,12 +89,12 @@
           </p>
         </div>
         <div class="col-12 col-lg-7 pt-5">
-          <img
-            class="d-block h-auto w-100"
-            src="/img/implementation-infographic.png"
-            alt="OpenEoX Lightweight and Standalone Implementations"
-          >
-          <div class="text-center">OpenEoX Lightweight and Standalone Implementations</div>
+          <div class="d-block h-auto w-100">
+            {{ with resources.Get "img/implementation-infographic.svg" }}
+              {{ .Content | safeHTML }}
+            {{ end }}
+          </div>
+          <div class="text-center pt-2">OpenEoX Lightweight and Standalone Implementations</div>
         </div>
       </div>
     </div>
