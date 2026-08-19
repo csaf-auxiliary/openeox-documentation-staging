@@ -16,8 +16,8 @@
 
   {{ $options := dict "includePaths" (slice "node_modules") }}
   {{ $style := resources.Get "scss/main.scss" | toCSS $options }}
-  <link rel="stylesheet" href="{{ relURL $style.RelPermalink }}">
-  <link rel="icon" type="image/png" href="{{ relURL "img/favicon.png" }}"/>
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+  <link rel="icon" type="image/png" href="{{ "img/favicon.png" | relURL }}">
 </head>
 <body>
   <div class="d-flex flex-column min-vh-100">
