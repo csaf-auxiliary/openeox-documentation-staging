@@ -48,12 +48,19 @@ jobs:
       - name: Install Node.js dependencies
         run: '[[ -f package-lock.json ]] && npm ci || true'
 
-      - name: Build with Hugo
+      - name: Build with Hugo for staging repo
         env:
           HUGO_ENVIRONMENT: production
           TZ: Europe/Berlin
-        run: hugo --gc --minify --baseURL "https://csaf-auxiliary.github.io/openeox-documentation-staging"
-        # run: hugo --gc --minify --baseURL "https://openeox.org"  # TODO: replace previous line with this after approval and confirming the url
+        if: ${{ github.repository_owner != 'oasis-open' }}
+        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name Build with Hugo for oasis-open
+        env:
+          HUGO_ENVIRONMENT: production
+          TZ: Europe/Berlin
+        if: github.repository_owner == 'oasis-open'
+        run: hugo --gc --minify --baseURL "https://openeox.org"
 
       - name: Remove .license files from 'public' folder
         run: find public -type f -name "*.license" -exec rm -f {} \;
