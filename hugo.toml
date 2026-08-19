@@ -2,4 +2,3 @@ locale = 'en-US'
 title = 'OpenEoX'
 disableKinds = ["taxonomy", "RSS", "sitemap"]
 ignoreFiles = [".license$"]
-baseUrl = 'http://localhost:1313/'  # TODO: Replace with 'https://openeox.org/' after approval and confirming the url
