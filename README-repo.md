@@ -153,9 +153,6 @@ The `hugo.toml` file contains the main configuration settings for the Hugo proje
 - **disableKinds**: Specifies which kinds of content to disable.
   The page types required for generating list-pages are disabled.
 
-- **baseUrl**: Specifies the root URL of your site,
-  which is used as the base for all relative links.
-
 ---
 
 ## History
