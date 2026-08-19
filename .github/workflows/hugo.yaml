@@ -52,7 +52,7 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           TZ: Europe/Berlin
-        run: hugo --gc --minify
+        run: hugo --gc --minify --baseURL "https://csaf-auxiliary.github.io/openeox-documentation-staging"
         # run: hugo --gc --minify --baseURL "https://openeox.org"  # TODO: replace previous line with this after approval and confirming the url
 
       - name: Remove .license files from 'public' folder
