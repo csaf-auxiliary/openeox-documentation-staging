@@ -55,7 +55,7 @@ jobs:
         if: ${{ github.repository_owner != 'oasis-open' }}
         run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      - name Build with Hugo for oasis-open
+      - name: Build with Hugo for oasis-open
         env:
           HUGO_ENVIRONMENT: production
           TZ: Europe/Berlin
