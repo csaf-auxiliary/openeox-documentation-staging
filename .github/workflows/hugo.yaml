@@ -60,7 +60,7 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: Europe/Berlin
         if: github.repository_owner == 'oasis-open'
-        run: hugo --gc --minify --baseURL "https://openeox.org"
+        run: hugo --gc --minify --baseURL "https://openeox.org/"
 
       - name: Remove .license files from 'public' folder
         run: find public -type f -name "*.license" -exec rm -f {} \;
